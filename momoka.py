@@ -76,8 +76,7 @@ async def start_bot(token):
         await bot.start(token)
 
 
-if __name__ == "__main__":
-    try:
-        asyncio.run(start_bot(os.getenv("BOT_TOKEN")))
-    except KeyboardInterrupt:
-        pass
+try:
+    asyncio.run(start_bot(os.getenv("BOT_TOKEN")))
+except KeyboardInterrupt:
+    pass
