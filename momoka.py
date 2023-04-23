@@ -17,8 +17,6 @@ class Emilico(commands.AutoShardedBot):
     # Using default init for now
 
     async def setup_hook(self):
-        if os.name != "nt":
-            os.setpgrp()
         extensions = [
             f"cogs.{extension[:-3]}"
             for extension in os.listdir("cogs")
